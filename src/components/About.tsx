@@ -2,7 +2,6 @@ import { Code2, Heart, Rocket, Users } from "lucide-react";
 
 /**
  * About Component
- * Introduces Ronny Mboya with positive attributes
  * Features:
  * - Personal introduction
  * - Key attributes with icons

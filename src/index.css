@@ -2,108 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 
- * Portfolio Design System
- * Dark theme with warm orange/amber accents for a modern, professional look
- * All colors MUST be in HSL format
- */
-
 @layer base {
   :root {
-    /* Dark theme as default - Modern portfolio aesthetic */
-    
-    /* Background: Deep dark blue-gray for main background */
     --background: 222 47% 11%;
-    /* Foreground: Off-white for main text */
     --foreground: 60 9.1% 97.8%;
-
-    /* Card colors - slightly lighter than background for depth */
     --card: 222 47% 13%;
     --card-foreground: 60 9.1% 97.8%;
-
-    /* Popover colors */
     --popover: 222 47% 11%;
     --popover-foreground: 60 9.1% 97.8%;
-
-    /* Primary: Vibrant orange for accents, CTAs, and highlights */
     --primary: 25 95% 53%;
     --primary-foreground: 222 47% 11%;
-
-    /* Secondary: Slightly lighter dark tone for cards and sections */
     --secondary: 217 33% 17%;
     --secondary-foreground: 60 9.1% 97.8%;
-
-    /* Muted: For less prominent elements */
     --muted: 217 33% 17%;
     --muted-foreground: 215 20.2% 65.1%;
-
-    /* Accent: Amber/gold for secondary highlights */
     --accent: 38 92% 50%;
     --accent-foreground: 222 47% 11%;
-
-    /* Destructive: Red for errors and warnings */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 60 9.1% 97.8%;
-
-    /* Border and input colors */
     --border: 217 33% 17%;
     --input: 217 33% 17%;
-    
-    /* Ring: Orange glow for focus states */
     --ring: 25 95% 53%;
-
     --radius: 0.5rem;
-
-    /* Custom gradient tokens */
-    --gradient-warm: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(35 91% 65%) 100%);
-    --gradient-dark: linear-gradient(180deg, hsl(220 13% 13%) 0%, hsl(220 13% 18%) 100%);
-    
-    /* Shadow tokens */
-    --shadow-glow: 0 0 40px hsl(25 95% 53% / 0.2);
-    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
-    
-    /* Animation tokens */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    
-    /* Chart colors */
     --chart-1: 25 95% 53%;
     --chart-2: 38 92% 50%;
     --chart-3: 173 58% 39%;
     --chart-4: 43 74% 66%;
     --chart-5: 197 37% 24%;
   }
-  
-  /* Optional light mode (if you want to add a theme toggle later) */
-  .light {
-    --background: 0 0% 100%;
-    --foreground: 20 14.3% 4.1%;
-    --card: 0 0% 100%;
-    --card-foreground: 20 14.3% 4.1%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 20 14.3% 4.1%;
-    --primary: 25 95% 53%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 60 4.8% 95.9%;
-    --secondary-foreground: 24 9.8% 10%;
-    --muted: 60 4.8% 95.9%;
-    --muted-foreground: 25 5.3% 44.7%;
-    --accent: 38 92% 50%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 60 9.1% 97.8%;
-    --border: 20 5.9% 90%;
-    --input: 20 5.9% 90%;
-    --ring: 25 95% 53%;
-  }
 }
 
 @layer base {
-  /* Apply border color to all elements */
   * {
     @apply border-border;
   }
 
-  /* Body styling - sets background and text color globally */
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
@@ -111,12 +44,10 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  /* Smooth scrolling for anchor links */
   html {
     scroll-behavior: smooth;
   }
   
-  /* Custom scrollbar styling for webkit browsers (Chrome, Safari, Edge) */
   ::-webkit-scrollbar {
     width: 10px;
   }
@@ -135,7 +66,6 @@
   }
 }
 
-/* Animation delay utilities for staggered animations */
 @layer utilities {
   .animation-delay-200 {
     animation-delay: 200ms;
@@ -151,5 +81,33 @@
   
   .animation-delay-800 {
     animation-delay: 800ms;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 1s ease-out forwards;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }

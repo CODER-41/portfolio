@@ -28,12 +28,10 @@ const Skills = () => {
     {
       title: "Backend",
       skills: [
-        "Node.js",
-        "Express.js",
         "Python",
-        "Django",
         "RESTful APIs",
-        "GraphQL",
+        "SQLite",
+        "PostgreSQL",
         "Authentication",
         "Database Design",
       ],
