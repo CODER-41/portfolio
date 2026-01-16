@@ -1,4 +1,4 @@
-import { Briefcase, GraduationCap } from "lucide-react";
+import { Briefcase, GraduationCap, LucideIcon } from "lucide-react";
 
 /**
  * Experience Component
@@ -69,7 +69,7 @@ const Experience = () => {
     highlights,
     isLast,
   }: {
-    icon: any;
+    icon: LucideIcon;
     title: string;
     subtitle: string;
     location: string;

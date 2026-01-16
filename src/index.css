@@ -2,45 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* 
+ * Portfolio Design System
+ * Dark theme with warm orange/amber accents for a modern, professional look
+ * All colors MUST be in HSL format
+ */
 
 @layer base {
   :root {
-    /* Warm professional color palette - Dark theme with orange/amber accents */
-    --background: 220 13% 13%;
-    --foreground: 40 80% 97%;
+    /* Dark theme as default - Modern portfolio aesthetic */
+    
+    /* Background: Deep dark blue-gray for main background */
+    --background: 222 47% 11%;
+    /* Foreground: Off-white for main text */
+    --foreground: 60 9.1% 97.8%;
 
-    --card: 220 13% 18%;
-    --card-foreground: 40 80% 97%;
+    /* Card colors - slightly lighter than background for depth */
+    --card: 222 47% 13%;
+    --card-foreground: 60 9.1% 97.8%;
 
-    --popover: 220 13% 18%;
-    --popover-foreground: 40 80% 97%;
+    /* Popover colors */
+    --popover: 222 47% 11%;
+    --popover-foreground: 60 9.1% 97.8%;
 
-    /* Primary: Warm orange */
+    /* Primary: Vibrant orange for accents, CTAs, and highlights */
     --primary: 25 95% 53%;
-    --primary-foreground: 220 13% 13%;
+    --primary-foreground: 222 47% 11%;
 
-    /* Secondary: Muted warm tone */
-    --secondary: 220 13% 23%;
-    --secondary-foreground: 40 80% 97%;
+    /* Secondary: Slightly lighter dark tone for cards and sections */
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 60 9.1% 97.8%;
 
-    --muted: 220 13% 23%;
-    --muted-foreground: 40 20% 70%;
+    /* Muted: For less prominent elements */
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    /* Accent: Lighter warm orange */
-    --accent: 35 91% 65%;
-    --accent-foreground: 220 13% 13%;
+    /* Accent: Amber/gold for secondary highlights */
+    --accent: 38 92% 50%;
+    --accent-foreground: 222 47% 11%;
 
+    /* Destructive: Red for errors and warnings */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 40 80% 97%;
+    --destructive-foreground: 60 9.1% 97.8%;
 
-    --border: 220 13% 25%;
-    --input: 220 13% 25%;
+    /* Border and input colors */
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    
+    /* Ring: Orange glow for focus states */
     --ring: 25 95% 53%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     /* Custom gradient tokens */
     --gradient-warm: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(35 91% 65%) 100%);
@@ -52,15 +64,92 @@ All colors MUST be HSL.
     
     /* Animation tokens */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Chart colors */
+    --chart-1: 25 95% 53%;
+    --chart-2: 38 92% 50%;
+    --chart-3: 173 58% 39%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 197 37% 24%;
+  }
+  
+  /* Optional light mode (if you want to add a theme toggle later) */
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 60 4.8% 95.9%;
+    --secondary-foreground: 24 9.8% 10%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 25 95% 53%;
   }
 }
 
 @layer base {
+  /* Apply border color to all elements */
   * {
     @apply border-border;
   }
 
+  /* Body styling - sets background and text color globally */
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Smooth scrolling for anchor links */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar styling for webkit browsers (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--accent));
+  }
+}
+
+/* Animation delay utilities for staggered animations */
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  
+  .animation-delay-800 {
+    animation-delay: 800ms;
   }
 }
