@@ -33,14 +33,14 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "ronny.mboya@example.com",
-      href: "mailto:ronny.mboya@example.com",
+      value: "mboyaronny41@gmail.com",
+      href: "mailto: mboyaronny41@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+254 712 345 678",
-      href: "tel:+254712345678",
+      value: "+254 769483882",
+      href: "tel:+254769483882",
     },
     {
       icon: MapPin,

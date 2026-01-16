@@ -3,11 +3,7 @@ import { Briefcase, GraduationCap, LucideIcon } from "lucide-react";
 /**
  * Experience Component
  * Displays education and work experience in a timeline format
- * Features:
- * - Visual timeline design
- * - Education and experience sections
- * - Icon-based differentiation
- * - Responsive layout
+
  */
 const Experience = () => {
   // Education data
@@ -16,13 +12,12 @@ const Experience = () => {
       institution: "Moringa School",
       degree: "Software Engineering Bootcamp",
       location: "Nairobi, Kenya",
-      period: "2024 - Present",
+      period: "August 2025 - Present",
       description:
         "Intensive fullstack software engineering program covering modern web technologies, data structures, algorithms, and best practices in software development.",
       highlights: [
         "Fullstack web development",
         "Data structures & algorithms",
-        "Agile methodologies",
         "Team collaboration",
       ],
     },
@@ -38,22 +33,21 @@ const Experience = () => {
       description:
         "Developing custom web applications for clients, focusing on responsive design and modern tech stacks.",
       highlights: [
-        "Built 10+ client projects",
-        "React & Node.js expertise",
+        "Built 5+ client projects",
+        "React & Typescript expertise",
         "Client satisfaction rate: 100%",
       ],
     },
     {
-      company: "Tech Community Kenya",
-      position: "Developer Mentor",
+      company: "SnakePiece Events Kenya",
+      position: "Software Developer ",
       location: "Nairobi, Kenya",
-      period: "2023 - Present",
+      period: "2025 - Present",
       description:
-        "Mentoring aspiring developers in web development fundamentals and best practices.",
+        "Crafting seamless experiences in the heart of Kenya. Where vision meets execution, one piece at a time.",
       highlights: [
-        "Mentored 20+ students",
+        "Managed 20+ events",
         "Conducted workshops",
-        "Community building",
       ],
     },
   ];
