@@ -29,26 +29,26 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Contact information array
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "mboyaronny41@gmail.com",
-      href: "mailto: mboyaronny41@gmail.com",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+254 769483882",
-      href: "tel:+254769483882",
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "Nairobi, Kenya",
-      href: "#",
-    },
-  ];
+ const contactInfo = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: "mboyaronny41@gmail.com",
+    href: "mailto: mboyaronny41@gmail.com"
+  },
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "+254 769483882",
+    href: "tel: +254769483882",
+  },
+  {
+    icon: MapPin,
+    label: "Location",
+    value: "Nairobi, Kenya",
+    href: "#"
+  },
+ ];
 
   // Handle input changes
   const handleChange = (
