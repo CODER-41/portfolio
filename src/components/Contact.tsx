@@ -47,7 +47,8 @@ const Contact = () => {
     label: "Location",
     value: "Nairobi, Kenya",
     href: "#"
-  },
+  }
+
  ];
 
   // Handle input changes
