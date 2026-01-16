@@ -6,9 +6,8 @@ import { Button } from "@/components/ui/button";
  * Showcases portfolio projects in a card layout
  * Features:
  * - Project cards with images
- * - Technology tags
- * - Links to live demos and source code
- * - Hover effects
+ * - Live demo links
+ * - Hover effects and animations
  */
 const Projects = () => {
   // Project data array for easy maintenance and scalability
@@ -17,7 +16,6 @@ const Projects = () => {
       title: "E-Commerce Platform",
       description:
         "A full-stack e-commerce solution with user authentication, product catalog, shopping cart, and secure payment integration using Stripe.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
       liveUrl: "#",
       githubUrl: "#",
       image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop",
@@ -26,7 +24,6 @@ const Projects = () => {
       title: "Task Management App",
       description:
         "Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      technologies: ["React", "Firebase", "Material-UI", "Redux"],
       liveUrl: "#",
       githubUrl: "#",
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
@@ -35,7 +32,6 @@ const Projects = () => {
       title: "Weather Dashboard",
       description:
         "Real-time weather application featuring location-based forecasts, interactive maps, and detailed weather metrics with a beautiful UI.",
-      technologies: ["React", "OpenWeather API", "Chart.js", "TypeScript"],
       liveUrl: "#",
       githubUrl: "#",
       image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
@@ -44,7 +40,6 @@ const Projects = () => {
       title: "Blog Platform",
       description:
         "Modern blogging platform with markdown support, comment system, user profiles, and content management capabilities.",
-      technologies: ["Next.js", "MongoDB", "Express", "TailwindCSS"],
       liveUrl: "#",
       githubUrl: "#",
       image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop",
@@ -53,7 +48,6 @@ const Projects = () => {
       title: "Fitness Tracker",
       description:
         "Personal fitness tracking application with workout logging, progress charts, goal setting, and nutritional information.",
-      technologies: ["React Native", "Node.js", "MongoDB", "Chart.js"],
       liveUrl: "#",
       githubUrl: "#",
       image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop",
@@ -62,7 +56,6 @@ const Projects = () => {
       title: "Social Media Dashboard",
       description:
         "Analytics dashboard for social media metrics with data visualization, trend analysis, and automated reporting features.",
-      technologies: ["Vue.js", "Python", "Django", "D3.js"],
       liveUrl: "#",
       githubUrl: "#",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
@@ -131,40 +124,18 @@ const Projects = () => {
                 <p className="text-foreground/70 text-sm mb-4 leading-relaxed">
                   {project.description}
                 </p>
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="text-xs px-3 py-1 bg-primary/10 text-primary rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                {/* Links */}
-                <div className="flex gap-3">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                    asChild
-                  >
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      Live Demo
-                    </a>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1 border-border hover:border-primary"
-                    asChild
-                  >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      Code
-                    </a>
-                  </Button>
-                </div>
+                {/* Live Demo Button */}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                  asChild
+                >
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="mr-2 h-4 w-4" />
+                    View Live Demo
+                  </a>
+                </Button>
               </div>
             </div>
           ))}

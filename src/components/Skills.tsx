@@ -41,10 +41,7 @@ const Skills = () => {
       title: "Database",
       skills: [
         "PostgreSQL",
-        "MongoDB",
         "MySQL",
-        "Firebase",
-        "Redis",
         "Database Optimization",
       ],
       color: "primary",
@@ -54,11 +51,7 @@ const Skills = () => {
       skills: [
         "Git & GitHub",
         "VS Code",
-        "Docker",
-        "AWS",
-        "Agile/Scrum",
         "Testing (Jest)",
-        "CI/CD",
         "Linux",
       ],
       color: "accent",
